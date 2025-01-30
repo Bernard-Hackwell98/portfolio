@@ -11,6 +11,7 @@ declare module "@react-three/fiber" {
   }
 }
 
+
 extend({ ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
