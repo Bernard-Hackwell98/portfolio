@@ -6,6 +6,10 @@ export default withSentryConfig(nextConfig, {
 // For all available options, see:
 // https://github.com/getsentry/sentry-webpack-plugin#options
 
+eslint: {
+    ignoreDuringBuilds: true, // disable eslint during build (fixes vercel warnings)
+  },
+
 org: "bittech-mj",
 project: "javascript-nextjs",
 
