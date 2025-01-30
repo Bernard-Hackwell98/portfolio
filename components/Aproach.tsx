@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
+import { SVGProps } from "react";
 
 const Aproach = () => {
   return (
@@ -143,7 +144,11 @@ const AceternityIcon = ({ order }: { order: string }) => {
   );
 };
 
-export const Icon = ({ className, ...rest }: any) => {
+interface IconProps extends SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+export const Icon: React.FC<IconProps> = ({ className, ...rest }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

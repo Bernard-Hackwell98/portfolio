@@ -1,3 +1,5 @@
+
+
 "use client";
 import { cn } from "@/lib/utils";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
@@ -22,6 +24,7 @@ export const CanvasRevealEffect = ({
   return (
     <div className={cn("h-full relative bg-white w-full", containerClassName)}>
       <div className="h-full w-full">
+
         <DotMatrix
           colors={colors}
           dotSize={dotSize ?? 3}
@@ -30,6 +33,7 @@ export const CanvasRevealEffect = ({
               float intro_offset = distance(u_resolution / 2.0 / u_total_size, st2) * 0.01 + (random(st2) * 0.15);
               opacity *= step(intro_offset, u_time * animation_speed_factor);
               opacity *= clamp((1.0 - step(intro_offset + 0.1, u_time * animation_speed_factor)) * 1.25, 1.0, 1.25);`}
+//@typescript-eslint/no-unused-vars
           center={["x", "y"]}
         />
       </div>
@@ -46,6 +50,7 @@ interface DotMatrixProps {
   totalSize?: number;
   dotSize?: number;
   shader?: string;
+//@typescript-eslint/no-unused-vars
   center?: ("x" | "y")[];
 }
 
@@ -55,6 +60,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   totalSize = 4,
   dotSize = 2,
   shader = "",
+//@typescript-eslint/no-unused-vars
   center = ["x", "y"],
 }) => {
   const uniforms = useMemo(() => {
@@ -113,6 +119,7 @@ const ShaderMaterial = ({
   });
 
   const getUniforms = () => {
+//@typescript-eslint/no-explicit-any
     const preparedUniforms: Record<string, any> = {};
 
     for (const [uniformName, uniform] of Object.entries(uniforms)) {
