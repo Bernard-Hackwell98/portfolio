@@ -4,7 +4,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
-const Approach = () => {
+const Aproach = () => {
     return (
       <section className="w-full py-20">
         <h1 className="heading">
@@ -66,7 +66,7 @@ const Approach = () => {
     );
   };
   
-  export default Approach;
+  export default Aproach;
   
   const Card = ({
     title,
