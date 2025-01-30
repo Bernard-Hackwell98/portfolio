@@ -8,7 +8,7 @@ export default withSentryConfig(nextConfig, {
 
 eslint: {
     ignoreDuringBuilds: true, // disable eslint during build (fixes vercel warnings)
-  },
+},
 
 org: "bittech-mj",
 project: "javascript-nextjs",
